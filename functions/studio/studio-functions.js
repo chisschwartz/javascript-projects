@@ -1,12 +1,12 @@
 //We want to COMPLETELY reverse an array by flipping the order of the entries AND flipping the order of characters in each element.
 
 // Part One: Reverse Characters
-//const str = 'LaunchCode';
-//function reverseCharacters(str) {
-  //  return str.split('').reverse().join('');
-//}
+const str = 'LaunchCode';
+function reverseCharacters(str) {
+    return str.split('').reverse().join('');
+}
 
-//console.log(reverseCharacters(str));
+console.log(reverseCharacters(str));
 
 // 1. Define the function as reverseCharacters. Give it one parameter, which will be the string to reverse.
 // 2. Within the function, split the string into an array, then reverse the array.
@@ -17,8 +17,8 @@
 
 // Part Two: Reverse Digits
 
-const str = 'Launchcode';
-const num = 35;
+
+const num = 35; // different variables for easier testing!
 const text = num.toString();
 function reverseCharacters(num) {
     if (typeof num === 'string') {
@@ -50,6 +50,18 @@ console.log(typeof num);
 let arrayTest1 = ['apple', 'potato', 'Capitalized Words'];
 let arrayTest2 = [123, 8897, 42, 1168, 8675309];
 let arrayTest3 = ['hello', 'world', 123, 'orange'];
+
+function reverseEverything(reversingArr) {
+    let startingArr = [];
+    for (let index = 0; index < reversingArr.length; index++) {
+        startingArr.push(reverseCharacters(reversingArr[index]))
+    }
+    return startingArr.reverse();
+}
+
+console.log(reverseEverything(arrayTest1));
+console.log(reverseEverything(arrayTest2));
+console.log(reverseEverything(arrayTest3));
 
 // Bonus Missions
 
