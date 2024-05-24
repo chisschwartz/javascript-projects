@@ -1,6 +1,12 @@
 //We want to COMPLETELY reverse an array by flipping the order of the entries AND flipping the order of characters in each element.
 
 // Part One: Reverse Characters
+//const str = 'LaunchCode';
+//function reverseCharacters(str) {
+  //  return str.split('').reverse().join('');
+//}
+
+//console.log(reverseCharacters(str));
 
 // 1. Define the function as reverseCharacters. Give it one parameter, which will be the string to reverse.
 // 2. Within the function, split the string into an array, then reverse the array.
@@ -10,6 +16,21 @@
 // 6. Optional: Use method chaining to reduce the lines of code within the function.
 
 // Part Two: Reverse Digits
+
+const str = 'Launchcode';
+const num = 35;
+const text = num.toString();
+function reverseCharacters(num) {
+    if (typeof num === 'string') {
+        return num.split('').reverse().join('');
+    } else {
+        return text.split('').reverse().join('');
+    }
+}
+
+console.log(reverseCharacters(num));
+console.log(typeof num);
+
 
 // 1. Add an if statement to reverseCharacters to check the typeof the parameter.
 // 2. If typeof is ‘string’, return the reversed string as before.
